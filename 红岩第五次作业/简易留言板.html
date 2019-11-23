@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>留言板</title>
+        <style>
+            .h1{
+                background-color: green;
+                color: white;
+                display: flex;
+                justify-content: center;
+                }
+            .main{
+                width: 1503px;
+                margin: -21px auto;
+                height: 800px;
+                background-color: teal;
+                color: white;
+            }
+
+            li{
+                position: relative;
+                width: 800px;
+                left: 100px;
+            }
+            .btn{
+                display: flex;
+                justify-content: center;
+            }
+            #text{
+                width: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="h1">Xu的简易留言版</h1>
+        <div class="main"> 
+            <div class="btn">
+                <textarea  placeholder="写点什么吧" id="text"></textarea>
+                <input type="button" value="提交" id="button">
+            </div>
+            <h1>评论区</h1>
+            <ul id="content"></ul>
+        </div>
+        <script>
+            window.onload = function(){
+                var Text = document.getElementById("text");
+                var Button = document.getElementById("button");
+                var oul = document.getElementById("content");
+                Button.onclick = function(){
+                    var otext = Text.value;
+                    var oli = document.createElement("li");
+                    oli.innerHTML = otext;
+                    if(oul.children.length > 0){
+                        var FirstNode = oul.children[0];
+                        oul.insertBefore(oli, FirstNode);
+                    }
+                    else{
+                        oul.append(oli);
+                    }
+                }
+            }        
+        </script>
+    </body>
+</html>

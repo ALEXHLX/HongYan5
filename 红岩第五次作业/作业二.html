@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>列表</title>
+        <style>
+            #ul1{
+                color: white;
+                width: 400px;
+            }
+            body{
+                background:url(a2.jpg) no-repeat;
+                background-size: 1500px 800px;
+            }
+            #demo{color: white;}
+        </style>
+    </head>
+    <body>
+        <ul id = "ul1">
+            <li>我从来不想独身</li>
+            <li>却又预感晚婚</li>
+            <li>我在等 世上</li>
+            <li>唯一契合灵魂</li>
+            <li>让我擦去脸上脂粉</li>
+            <li>让他听完全部传闻</li>
+            <li>再聊聊若是非得分</li>
+            <li>先相约谁都不许苦撑</li>
+            <li>他能不能 能不能</li>
+        </ul>
+        <div id="demo"></div>
+        <button id="btn" onclick="changeColor()">点击改变列表颜色</button>
+        <script>
+            window.onload = function(){
+                var UL = document.getElementById("ul1");
+                UL.onclick = function(ev){
+                    var e = ev || window.ev;
+                    var target = e.target || e.srcElement;
+                    if(target.nodeName.toLowerCase() == "li"){
+                        document.getElementById("demo").innerHTML = target.innerHTML;
+                    }
+                } 
+            }
+            function changeColor(){
+                var LI = document.getElementsByTagName("li");
+                for(var i = 0; i < LI.length; i++ ){
+                    if( (i + 1) % 2 == 0){
+                        LI[i].style.color = "blue";
+                    }
+                    else{
+                        LI[i].style.color = "red";
+                    }
+                }
+            }
+
+        </script>
+    </body>
+</html>

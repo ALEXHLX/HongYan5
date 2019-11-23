@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>作业一</title>
+    <style>
+        .main{
+            width: 1500px;
+            height:100%;
+            background-color: grey;
+            color: white;
+        }
+        .head{
+            width: 300px;
+            margin: 0 auto;
+            position: relative;
+            top: 70px;
+            left: 150px;
+        }
+        .a{
+            display: flex;
+        }
+        #title{color: rgba(180, 173, 173, 0.541);}
+        .content{
+            width: 320px;
+            margin: 0 auto;
+            position: relative;
+            top: 70px;
+            left: 150px;
+        }
+        img{
+            width: 300px;
+            height: 300px;
+            float: left;
+            position: relative;
+            left: 350px;
+            top: 50px;
+        }
+        .buton{
+            padding-top: 120px;
+            width: 400px;
+            margin: 20px auto;
+        }
+    </style>
+    <body>
+        <div class="main">
+            <div class="head">
+                <p style="height:0px;">暗示分离</p>
+                <div class="a">
+                    <p id="title">歌手：</p>
+                    <p id="answer">en</p>
+                    <p id="title">专辑：</p>
+                    <p id="answer">暗示分离</p>
+                </div>  
+            </div>
+            <img src=".\a1.jpg">
+            <div class="content">
+                <p>原来我也只是你 无名的过去</p>
+                <P>用安心陪你构思全局</P>
+                <P>用贪心盼你能多写一笔</P>
+                <P>通篇却找不到有关我名字的踪迹</P>
+                <P>我们都莫名保存些秘密</P>
+                <P>何时起陌生能把我们隔离</P>
+                <P>说不出的话 转身之后都表明</P>
+                <P>请允许我用哭泣为故事收场作序</P>
+                <P>你又何苦用无声来暗示分离</P>
+                <P>主题的关键人物是你</P>
+                <P>主线是流转的心酸着迷</P>
+            </div>
+            <div class="buton">
+                <button id="bt1" onclick="changeBackground()">点击我更改背景颜色</button>
+                <button id="bt2" onclick="large()">大号字体</button>
+                <button id="bt2" onclick="middle()">中号字体</button>
+                <button id="bt2" onclick="small()">小号字体</button>
+            </div>
+        </div>
+
+        <script>
+        function changeBackground(){
+            let a = document.querySelector(".main");
+            a.style.background = "black";
+            a.style.color = "grey";
+        }
+
+        function large(){
+            let a = document.querySelector(".main");
+            a.style.fontSize = "30px";
+        }
+
+        function middle(){
+            let a = document.querySelector(".main");
+            a.style.fontSize = "20px";
+        }
+
+        function small(){
+            let a = document.querySelector(".main");
+            a.style.fontSize = "15px";
+        }
+        </script>
+    </body>
+</html>
